@@ -10,11 +10,13 @@ A WordPress plugin built by **[Nahnu Plugins](https://nahnuplugins.com)** that t
 
 ## Why this exists
 
-We build a lot of SureCart-powered sites for fitness coaches and agencies in the MENA region. SureCart is a great product but its storefront has no native theming layer. Every project meant writing the same CSS overrides by hand.
+At [Nahnu Plugins](https://nahnuplugins.com) we build commercial WordPress plugins — and we sell them through SureCart. Our own plugin store at [nahnuplugins.com](https://nahnuplugins.com) runs on SureCart, as do the sites of many fitness coaches and agencies in the MENA region that we build for.
 
-This plugin is our attempt at a proper theming solution. It documents which CSS custom properties actually work, which elements are plain DOM vs Shadow DOM, and packages everything into a point-and-click settings page.
+SureCart is a great product but it has no native theming layer. Every SureCart store we build ends up needing the same CSS overrides hand-written from scratch. Over time we started documenting which CSS custom properties actually work, which elements are plain DOM vs Shadow DOM, and where `!important` is unavoidable because of inline styles set by the block editor — and eventually it made sense to package all of that into a proper plugin.
 
-**We're sharing this publicly and plan to send it to the SureCart team** in the hope that it inspires a native theming feature inside SureCart itself. Until then, this is a community solution — free to use, fork, and build on.
+This is that plugin. We use it ourselves on our own Nahnu Plugins store and on client sites. We're sharing it publicly because anyone running SureCart deserves a way to theme it without writing CSS, and we're hoping it opens a conversation with the SureCart team about building theming natively into the product.
+
+**We plan to share this directly with the SureCart team.** Until native theming exists, this is our best community-built solution — free to use, fork, and build on.
 
 ---
 
@@ -75,7 +77,7 @@ All generated CSS is output via `wp_add_inline_style()` at priority 999, ensurin
 
 CSS custom properties used by the plugin are set at `:root` level so they cross Shadow DOM boundaries into SureCart's Stencil components.
 
-The plugin registers its own `nst-styles` script handle to avoid dependency on `wp-block-library` being enqueued, which varies by theme.
+The plugin registers its own `nst-styles` handle to avoid dependency on `wp-block-library` being enqueued, which varies by theme.
 
 ---
 
@@ -112,7 +114,9 @@ GPL-2.0-or-later — free to use, modify, and distribute.
 
 ## Credits
 
-Built by **[Nahnu Plugins](https://nahnuplugins.com)** — WordPress plugins for fitness coaches and agencies in the MENA region.
+Built by **[Nahnu Plugins](https://nahnuplugins.com)** — a commercial WordPress plugin company serving fitness coaches, agencies, and creators in the MENA region.
+
+We build and sell our own plugins through SureCart, which is why we care about this problem enough to build a proper solution for it.
 
 - Website: [nahnuplugins.com](https://nahnuplugins.com)
 - GitHub: [github.com/jaimealnassim/nahnu-surecart-theme](https://github.com/jaimealnassim/nahnu-surecart-theme)
