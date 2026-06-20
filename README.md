@@ -10,7 +10,7 @@ A WordPress plugin built by **[Nahnu Plugins](https://nahnuplugins.com)** that t
 
 ## Why this exists
 
-At [Nahnu Plugins](https://nahnuplugins.com) we build commercial WordPress plugins — and we sell them through SureCart. Our plugin websites use SureCart, for example [WP Smart Consent](https://www.wpsmartconsent.com/), as do many of the fitness coaches and agencies in the MENA region that we build for.
+At [Nahnu Plugins](https://nahnuplugins.com) we build commercial WordPress plugins — and we sell them through SureCart. All of our plugin websites use SureCart, for example [WP Smart Consent](https://www.wpsmartconsent.com/).
 
 SureCart is a great product but it has no native theming layer. Every SureCart store we build ends up needing the same CSS overrides hand-written from scratch. Over time we started documenting which CSS custom properties actually work, which elements are plain DOM vs Shadow DOM, and where `!important` is unavoidable because of inline styles set by the block editor — and eventually it made sense to package all of that into a proper plugin.
 
