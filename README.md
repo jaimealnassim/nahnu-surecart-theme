@@ -1,4 +1,4 @@
-# Nahnu SureCart Theme
+# Nahnu Custom Theme for SureCart
 
 [![GitHub](https://img.shields.io/badge/GitHub-nahnu--surecart--theme-181717?logo=github)](https://github.com/jaimealnassim/nahnu-surecart-theme)
 
@@ -52,6 +52,11 @@ This is an **unofficial, community-built plugin** and is **not affiliated with, 
 - Row spacing between form fields
 - Choice/plan selector card radius
 
+### Presets & Tools tab
+- **Live preview** — a representative cart, checkout and dashboard rendered beside the form from SureCart's own class names and stylesheet rules, updated on every change before you save
+- **Presets** — Obsidian, Soft, Sharp, Sage; one click fills every setting
+- **Export / import** — settings as JSON, for moving a theme between sites
+
 ### Account Dashboard tab
 - Page background color
 - Sidebar background and width
@@ -63,9 +68,9 @@ This is an **unofficial, community-built plugin** and is **not affiliated with, 
 
 ## How it works
 
-SureCart's mini cart uses the WordPress Blocks (blocks-next) system and is **plain DOM** — no Shadow DOM. This means standard CSS selectors work, though many colors are set as inline styles in the block editor output, which requires `!important` overrides in a few targeted places.
+SureCart's mini cart uses the WordPress Blocks (blocks-next) system and is **plain DOM** — no Shadow DOM. Its block stylesheets read two master tokens for nearly all text (`--sc-cart-main-label-text-color` and `--sc-input-help-text-color`) plus `--sc-drawer-*` and `--sc-cart-icon-*` tokens, so on a stock cart template the plugin themes it by setting those tokens on the cart wrapper with no `!important`. When a store owner has customised the cart in the Site Editor, WordPress writes hard-coded inline colours onto the elements; a second block of `!important` rules covers that case.
 
-SureCart's checkout page uses Stencil Web Components with **Shadow DOM**. CSS cannot reach inside shadow roots directly, but CSS custom properties (variables) cross the shadow boundary through inheritance. Every checkout token in this plugin was verified against the SureCart 4.2.2 source.
+SureCart's checkout page uses Stencil Web Components with **Shadow DOM**. CSS cannot reach inside shadow roots directly, but CSS custom properties (variables) cross the shadow boundary through inheritance. Every checkout token in this plugin was verified against the SureCart 4.2.2 and 4.10.0 source; the token set is identical between the two.
 
 SureCart's account dashboard is a WordPress page template (`template-surecart-dashboard.php`). The shell is plain DOM and fully styleable. Content components inside are Shadow DOM and are themed via tokens.
 
@@ -86,14 +91,14 @@ The plugin registers its own `nst-styles` handle to avoid dependency on `wp-bloc
 1. Download the ZIP from [GitHub](https://github.com/jaimealnassim/nahnu-surecart-theme/releases) or clone the repo
 2. In WordPress: **Plugins > Add New > Upload Plugin**
 3. Upload the ZIP and activate
-4. Go to **Settings > SureCart Theme**
+4. Go to **Settings > Custom Theme for SureCart**
 
 ---
 
 ## Requirements
 
 - WordPress 6.0+
-- SureCart 4.x (tested against 4.2.2)
+- SureCart 4.x (verified against 4.2.2 and 4.10.0)
 - PHP 8.0+
 
 ---
@@ -118,5 +123,6 @@ Built by **[Nahnu Plugins](https://nahnuplugins.com)** — a commercial WordPres
 
 We build and sell our own plugins through SureCart, which is why we care about this problem enough to build a proper solution for it.
 
+- Plugin page: [nahnuplugins.com/wordpress-plugins](https://www.nahnuplugins.com/wordpress-plugins/)
 - Website: [nahnuplugins.com](https://nahnuplugins.com)
 - GitHub: [github.com/jaimealnassim/nahnu-surecart-theme](https://github.com/jaimealnassim/nahnu-surecart-theme)

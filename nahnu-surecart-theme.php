@@ -1,13 +1,14 @@
 <?php
 /**
- * Plugin Name:       Nahnu SureCart Theme
- * Plugin URI:        https://github.com/jaimealnassim/nahnu-surecart-theme
+ * Plugin Name:       Nahnu Custom Theme for SureCart
+ * Plugin URI:        https://www.nahnuplugins.com/wordpress-plugins/
  * Description:       Unofficial proof-of-concept plugin by Nahnu Plugins. Themes the SureCart mini cart, checkout, and account dashboard to match your brand — accent color, inputs, sidebar, and more — no CSS required.
- * Version:           1.0.0
+ * Version:           1.2.0
  * Requires at least: 6.0
  * Requires PHP:      8.0
- * Author:            Nahnu Plugins
- * Author URI:        https://nahnuplugins.com
+ * Requires Plugins:  surecart
+ * Author:            ja1me4
+ * Author URI:        https://www.nahnuplugins.com
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       nahnu-surecart-theme
@@ -18,29 +19,47 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'NST_VERSION',  '1.0.0' );
-define( 'NST_FILE',     __FILE__ );
-define( 'NST_DIR',      plugin_dir_path( __FILE__ ) );
-define( 'NST_URL',      plugin_dir_url( __FILE__ ) );
-define( 'NST_OPTION',   'nst_settings' );
+define( 'NAHNU_SCT_VERSION', '1.2.0' );
+define( 'NAHNU_SCT_FILE', __FILE__ );
+define( 'NAHNU_SCT_DIR', plugin_dir_path( __FILE__ ) );
+define( 'NAHNU_SCT_URL', plugin_dir_url( __FILE__ ) );
+define( 'NAHNU_SCT_OPTION', 'nahnu_sct_settings' );
 
-require_once NST_DIR . 'includes/class-nst-settings.php';
-require_once NST_DIR . 'includes/class-nst-css-builder.php';
-require_once NST_DIR . 'includes/class-nst-frontend.php';
-require_once NST_DIR . 'includes/class-nst-admin.php';
-require_once NST_DIR . 'includes/class-nst-avatar.php';
+require_once NAHNU_SCT_DIR . 'includes/class-nahnu-sct-settings.php';
+require_once NAHNU_SCT_DIR . 'includes/class-nahnu-sct-css-builder.php';
+require_once NAHNU_SCT_DIR . 'includes/class-nahnu-sct-frontend.php';
+require_once NAHNU_SCT_DIR . 'includes/class-nahnu-sct-admin.php';
+require_once NAHNU_SCT_DIR . 'includes/class-nahnu-sct-avatar.php';
+require_once NAHNU_SCT_DIR . 'includes/class-nahnu-sct-tools.php';
+
+/**
+ * Carry settings over from the pre-1.2.0 option key, once.
+ *
+ * The PHP prefix changed from nst_ to nahnu_sct_ for the WordPress.org
+ * release; existing installs keep their configuration.
+ */
+function nahnu_sct_maybe_migrate(): void {
+	if ( false !== get_option( NAHNU_SCT_OPTION, false ) ) {
+		return;
+	}
+	$legacy = get_option( 'nst_settings', false );
+	if ( is_array( $legacy ) ) {
+		update_option( NAHNU_SCT_OPTION, $legacy );
+		delete_option( 'nst_settings' );
+	}
+}
 
 /**
  * Boot the plugin on plugins_loaded.
  */
-function nst_init(): void {
-	load_plugin_textdomain( 'nahnu-surecart-theme', false, dirname( plugin_basename( NST_FILE ) ) . '/languages' );
-	new NST_Frontend();
-	new NST_Avatar();
+function nahnu_sct_init(): void {
+	nahnu_sct_maybe_migrate();
+	new Nahnu_SCT_Frontend();
+	new Nahnu_SCT_Avatar();
 
 	if ( is_admin() ) {
-		new NST_Admin();
+		new Nahnu_SCT_Admin();
+		new Nahnu_SCT_Tools();
 	}
 }
-add_action( 'plugins_loaded', 'nst_init' );
-
+add_action( 'plugins_loaded', 'nahnu_sct_init' );
