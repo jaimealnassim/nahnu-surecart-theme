@@ -445,7 +445,8 @@ class Nahnu_SCT_CSS_Builder {
 
 		$font_line = '';
 		if ( ! empty( $s['font_family'] ) ) {
-			$font_line = "\n  --sc-font-sans: " . esc_attr( $s['font_family'] ) . ', -apple-system, BlinkMacSystemFont, sans-serif;';
+			// Already reduced to an inert, quoted font list by Nahnu_SCT_Settings::sanitize_font_family(). Note that esc_attr() would be the wrong escaping here, because it turns the quotes into HTML entities.
+			$font_line = "\n  --sc-font-sans: " . $s['font_family'] . ', -apple-system, BlinkMacSystemFont, sans-serif;';
 		}
 
 		// SureCart's own StylesService::register() writes --sc-color-primary-500,

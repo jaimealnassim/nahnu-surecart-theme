@@ -227,7 +227,7 @@
 
 	function liveStyle() {
 		var doc = frame.contentDocument;
-		return doc ? doc.getElementById( 'nst-live' ) : null;
+		return doc ? doc.getElementById( 'nahnu-sct-preview-inline-css' ) : null;
 	}
 
 	// POST the current form state and inject the generated CSS into the iframe.

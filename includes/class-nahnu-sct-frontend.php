@@ -35,6 +35,10 @@ class Nahnu_SCT_Frontend {
 		// registered (not necessarily enqueued) handle still output.
 		wp_register_style( 'nahnu-sct-styles', false, array(), NAHNU_SCT_VERSION );
 		wp_enqueue_style( 'nahnu-sct-styles' );
-		wp_add_inline_style( 'nahnu-sct-styles', $css );
+		// Every value in $css was validated by Nahnu_SCT_Settings::sanitize() (hex colours,
+		// CSS lengths, allow-listed shadows and weights, a strict font-family list), both on
+		// save and again on read. wp_strip_all_tags() is the final guard against a stray tag
+		// ending the <style> element.
+		wp_add_inline_style( 'nahnu-sct-styles', wp_strip_all_tags( $css ) );
 	}
 }

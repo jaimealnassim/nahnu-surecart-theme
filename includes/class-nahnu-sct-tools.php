@@ -288,6 +288,7 @@ class Nahnu_SCT_Tools {
 		} elseif ( ! empty( $settings['default_avatar_preset'] ) ) {
 			$preview_avatar_url = Nahnu_SCT_Avatar::preset_url( $settings['default_avatar_preset'] );
 		}
+		$nahnu_sct_preview_settings = $settings;
 		ob_start();
 		include NAHNU_SCT_DIR . 'includes/views/preview.php';
 		return (string) ob_get_clean();

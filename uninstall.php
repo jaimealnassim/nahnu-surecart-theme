@@ -17,7 +17,7 @@ if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
  */
 function nahnu_sct_uninstall_site(): void {
 	delete_option( 'nahnu_sct_settings' );
-	delete_option( 'nst_settings' ); // Option key used before the 1.2.0 prefix change.
+	delete_option( 'nst_settings' ); // Option key used before the WordPress.org release.
 }
 
 nahnu_sct_uninstall_site();

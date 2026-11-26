@@ -12,18 +12,18 @@
 
 defined( 'ABSPATH' ) || exit;
 
-// This file is a standalone HTML document rendered into an <iframe srcdoc>
-// on the settings page (see Nahnu_SCT_Tools::preview_doc()). It is never part
-// of a WordPress page, so wp_enqueue_style() cannot be used here.
-$nahnu_sct_base_css   = NAHNU_SCT_URL . 'assets/css/preview-base.css?v=' . NAHNU_SCT_VERSION;
+// This file is a standalone HTML document rendered into an <iframe srcdoc> on
+// the settings page (see Nahnu_SCT_Tools::preview_doc()). Its styles go through
+// the normal registration APIs and are printed here with wp_print_styles().
+wp_register_style( 'nahnu-sct-preview', NAHNU_SCT_URL . 'assets/css/preview-base.css', array(), NAHNU_SCT_VERSION );
+wp_add_inline_style( 'nahnu-sct-preview', wp_strip_all_tags( ( new Nahnu_SCT_CSS_Builder( $nahnu_sct_preview_settings ) )->build() ) );
 $nahnu_sct_avatar_url = isset( $preview_avatar_url ) ? $preview_avatar_url : '';
 ?>
 <!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<link rel="stylesheet" href="<?php echo esc_url( $nahnu_sct_base_css ); ?>"><?php // phpcs:ignore WordPress.WP.EnqueuedResources.NonEnqueuedStylesheet -- Standalone iframe document, see header comment. ?>
-<style id="nst-live"></style>
+<?php wp_print_styles( 'nahnu-sct-preview' ); ?>
 </head>
 <body>
 

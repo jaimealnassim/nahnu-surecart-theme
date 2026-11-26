@@ -223,7 +223,7 @@ class Nahnu_SCT_Admin {
 
 		// phpcs:disable WordPress.Security.NonceVerification.Recommended -- Read-only display state from the redirect after save; nothing is written here.
 		$tab = isset( $_GET['tab'] ) ? sanitize_key( wp_unslash( $_GET['tab'] ) ) : 'brand';
-		if ( ! in_array( $tab, array( 'brand', 'cart', 'checkout', 'account', 'tools' ), true ) ) {
+		if ( ! in_array( $tab, array( 'brand', 'cart', 'checkout', 'account', 'tools', 'about' ), true ) ) {
 			$tab = 'brand';
 		}
 		$notice = '';
@@ -241,6 +241,7 @@ class Nahnu_SCT_Admin {
 			'checkout' => array( __( 'Checkout', 'nahnu-surecart-theme' ), 'M1 4h22v16H1zM1 10h22' ),
 			'account'  => array( __( 'Account', 'nahnu-surecart-theme' ), 'M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2M12 3a4 4 0 1 0 0 8 4 4 0 0 0 0-8z' ),
 			'tools'    => array( __( 'Presets & Tools', 'nahnu-surecart-theme' ), 'M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z' ),
+			'about'    => array( __( 'About', 'nahnu-surecart-theme' ), 'M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20zM12 16v-4M12 8h.01' ),
 		);
 		?>
 		<div class="nst-app" data-tab="<?php echo esc_attr( $tab ); ?>">
@@ -306,6 +307,10 @@ class Nahnu_SCT_Admin {
 
 					<div class="nst-panel<?php echo 'tools' === $tab ? ' active' : ''; ?>" id="nst-tab-tools-import">
 						<?php Nahnu_SCT_Tools::render_import_form(); ?>
+					</div>
+
+					<div class="nst-panel<?php echo 'about' === $tab ? ' active' : ''; ?>" id="nst-tab-about">
+						<?php $this->panel_about(); ?>
 					</div>
 				</main>
 
@@ -383,6 +388,108 @@ class Nahnu_SCT_Admin {
 		( new Nahnu_SCT_Avatar() )->render_ui( $s );
 
 		$this->panel_close();
+	}
+
+	/**
+	 * Plugins listed on the About tab.
+	 *
+	 * Static, informational links only: this plugin makes no request to any of these sites.
+	 *
+	 * @return array<int, array{name: string, tag: string, url: string, text: string, steps?: string[], note?: string}>
+	 */
+	private function about_plugins(): array {
+		return array(
+			array(
+				'name'  => 'WP Smart Consent',
+				'tag'   => __( 'Works with SureCart', 'nahnu-surecart-theme' ),
+				'url'   => 'https://www.wpsmartconsent.com/',
+				'text'  => __( 'Marketing consent, not a cookie banner. It adds one opt-in checkbox to your SureCart checkout, sends each opt-in to your email tools and keeps a tamper-evident consent log. It works alongside your existing cookie plugin.', 'nahnu-surecart-theme' ),
+				'steps' => array(
+					__( 'Turn on SureCart in the plugin\'s Checkouts settings and choose where the checkbox appears.', 'nahnu-surecart-theme' ),
+					__( 'Connect your email tools by pasting an API key. Your lists and tags load automatically.', 'nahnu-surecart-theme' ),
+					__( 'Opt-ins are forwarded to your tools and logged as they happen. If a tool is down, checkout carries on, so customers never wait on your CRM.', 'nahnu-surecart-theme' ),
+				),
+			),
+			array(
+				'name' => 'WP Bunny Connector',
+				'tag'  => __( 'Free', 'nahnu-surecart-theme' ),
+				'url'  => 'https://www.wpbunnyconnector.com/',
+				'text' => __( 'This is how we run SureCart behind Bunny. It caches your HTML at Bunny.net\'s edge, deploys edge rules, syncs cache purges, and builds bypass rules from SureCart\'s own pages automatically, with no URLs to enter by hand.', 'nahnu-surecart-theme' ),
+				'note' => __( 'An independent tool, not affiliated with or endorsed by Bunny.net.', 'nahnu-surecart-theme' ),
+			),
+			array(
+				'name' => 'WP LinkCanvas',
+				'tag'  => __( 'Link in bio', 'nahnu-surecart-theme' ),
+				'url'  => 'https://www.wplinkcanvas.com/',
+				'text' => __( 'Our link-in-bio plugin: self-hosted bio pages on your own site, sold as a single payment. Multilingual pages, country targeting, built-in themes and video support.', 'nahnu-surecart-theme' ),
+			),
+			array(
+				'name' => 'WP WAF Manager',
+				'tag'  => __( 'Cloudflare', 'nahnu-surecart-theme' ),
+				'url'  => 'https://www.wpwafmanager.com/',
+				'text' => __( 'One-click Cloudflare rules for your WordPress site.', 'nahnu-surecart-theme' ),
+			),
+			array(
+				'name' => 'Nahnu Login Shield',
+				'tag'  => __( 'Free', 'nahnu-surecart-theme' ),
+				'url'  => 'https://www.nahnuloginshield.com/',
+				'text' => __( 'Our free login protection plugin: lockouts, CAPTCHA, two-factor authentication, passkeys and geo-blocking, with its logs kept in your own database.', 'nahnu-surecart-theme' ),
+			),
+		);
+	}
+
+	/** About tab: who we are and the plugins we make. */
+	private function panel_about(): void {
+		?>
+		<div class="nst-panel-head">
+			<h2><?php esc_html_e( 'About Nahnu Plugins', 'nahnu-surecart-theme' ); ?></h2>
+			<p><?php esc_html_e( 'We build WordPress plugins and sell them on our own sites with SureCart.', 'nahnu-surecart-theme' ); ?></p>
+		</div>
+
+		<section class="nst-section">
+			<div class="nst-section-body nst-prose">
+				<p><?php esc_html_e( 'This plugin started as the styling layer we needed for our own plugin sites. Every store we run on SureCart needs a cart, checkout and account area that match its brand, and we did not want to maintain custom CSS on each one. So we put the settings in one place, with a live preview, and now we are sharing it with anyone else selling with SureCart.', 'nahnu-surecart-theme' ); ?></p>
+				<p><?php esc_html_e( 'It is an unofficial proof of concept, not affiliated with or endorsed by SureCart. Feedback and ideas are welcome.', 'nahnu-surecart-theme' ); ?></p>
+			</div>
+		</section>
+
+		<h3 class="nst-subhead"><?php esc_html_e( 'Our plugins', 'nahnu-surecart-theme' ); ?></h3>
+
+		<div class="nst-plugins">
+			<?php foreach ( $this->about_plugins() as $plugin ) : ?>
+				<article class="nst-plugin">
+					<header class="nst-plugin-head">
+						<h4><?php echo esc_html( $plugin['name'] ); ?></h4>
+						<span class="nst-chip"><?php echo esc_html( $plugin['tag'] ); ?></span>
+					</header>
+					<p><?php echo esc_html( $plugin['text'] ); ?></p>
+					<?php if ( ! empty( $plugin['steps'] ) ) : ?>
+						<ol class="nst-steps">
+							<?php foreach ( $plugin['steps'] as $step ) : ?>
+								<li><?php echo esc_html( $step ); ?></li>
+							<?php endforeach; ?>
+						</ol>
+					<?php endif; ?>
+					<?php if ( ! empty( $plugin['note'] ) ) : ?>
+						<p class="nst-plugin-note"><?php echo esc_html( $plugin['note'] ); ?></p>
+					<?php endif; ?>
+					<a class="nst-av-btn" href="<?php echo esc_url( $plugin['url'] ); ?>" target="_blank" rel="noopener noreferrer">
+						<?php esc_html_e( 'Visit site', 'nahnu-surecart-theme' ); ?>
+						<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+					</a>
+				</article>
+			<?php endforeach; ?>
+		</div>
+
+		<p class="nst-fineprint"><?php esc_html_e( 'These are plain links. This plugin does not connect to any of these sites or send them any data.', 'nahnu-surecart-theme' ); ?></p>
+
+		<h3 class="nst-subhead"><?php esc_html_e( 'Disclaimer', 'nahnu-surecart-theme' ); ?></h3>
+		<div class="nst-prose nst-disclaimer">
+			<p><strong><?php esc_html_e( 'This is NOT an official SureCart plugin.', 'nahnu-surecart-theme' ); ?></strong> <?php esc_html_e( 'Nahnu Custom Theme for SureCart is an independent, unofficial plugin.', 'nahnu-surecart-theme' ); ?> <?php esc_html_e( 'It is not made, reviewed, endorsed, sponsored or supported by SureCart or its owners, and it is not affiliated with them in any way.', 'nahnu-surecart-theme' ); ?></p>
+			<p><?php esc_html_e( 'The name "SureCart" is used only to describe which plugin this one works with. All SureCart names, logos and trademarks belong to their respective owners.', 'nahnu-surecart-theme' ); ?></p>
+			<p><?php esc_html_e( 'Please do not contact SureCart for help with this plugin. If something looks wrong in your cart, checkout or account area, turn this plugin off to check, and send questions or bug reports to us instead.', 'nahnu-surecart-theme' ); ?></p>
+		</div>
+		<?php
 	}
 
 	/** Mini Cart tab. */

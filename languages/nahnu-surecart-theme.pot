@@ -2,7 +2,7 @@
 # This file is distributed under the GPL-2.0-or-later license.
 msgid ""
 msgstr ""
-"Project-Id-Version: Nahnu Custom Theme for SureCart 1.2.0\n"
+"Project-Id-Version: Nahnu Custom Theme for SureCart 1.0.3\n"
 "Report-Msgid-Bugs-To: https://www.nahnuplugins.com/wordpress-plugins/\n"
 "POT-Creation-Date: 2025-06-20T00:00:00+00:00\n"
 "MIME-Version: 1.0\n"
@@ -41,7 +41,7 @@ msgstr ""
 msgid "https://www.nahnuplugins.com"
 msgstr ""
 
-#: includes/class-nahnu-sct-admin.php:42 includes/class-nahnu-sct-admin.php:253
+#: includes/class-nahnu-sct-admin.php:42 includes/class-nahnu-sct-admin.php:254
 msgid "Nahnu Custom Theme for SureCart"
 msgstr ""
 
@@ -53,399 +53,463 @@ msgstr ""
 msgid "Insufficient permissions."
 msgstr ""
 
-#: includes/class-nahnu-sct-admin.php:239 includes/class-nahnu-sct-admin.php:354
+#: includes/class-nahnu-sct-admin.php:239 includes/class-nahnu-sct-admin.php:359
 msgid "Brand"
 msgstr ""
 
-#: includes/class-nahnu-sct-admin.php:239
-msgid "Accent, font, avatar"
-msgstr ""
-
-#: includes/class-nahnu-sct-admin.php:240 includes/class-nahnu-sct-admin.php:390
+#: includes/class-nahnu-sct-admin.php:240 includes/class-nahnu-sct-admin.php:490
 msgid "Mini Cart"
 msgstr ""
 
-#: includes/class-nahnu-sct-admin.php:240
-msgid "Drawer, bubble, features"
-msgstr ""
-
-#: includes/class-nahnu-sct-admin.php:241 includes/class-nahnu-sct-admin.php:317 includes/class-nahnu-sct-admin.php:429
+#: includes/class-nahnu-sct-admin.php:241 includes/class-nahnu-sct-admin.php:322 includes/class-nahnu-sct-admin.php:529
 msgid "Checkout"
 msgstr ""
 
-#: includes/class-nahnu-sct-admin.php:241
-msgid "Inputs, choices, spacing"
-msgstr ""
-
-#: includes/class-nahnu-sct-admin.php:242 includes/class-nahnu-sct-admin.php:477
+#: includes/class-nahnu-sct-admin.php:242 includes/class-nahnu-sct-admin.php:577
 msgid "Account"
 msgstr ""
 
-#: includes/class-nahnu-sct-admin.php:242
-msgid "Dashboard, cards, nav"
-msgstr ""
-
-#: includes/class-nahnu-sct-admin.php:243 includes/class-nahnu-sct-tools.php:303
+#: includes/class-nahnu-sct-admin.php:243 includes/class-nahnu-sct-tools.php:304
 msgid "Presets & Tools"
 msgstr ""
 
-#: includes/class-nahnu-sct-admin.php:243
-msgid "Starting points, export"
+#: includes/class-nahnu-sct-admin.php:244
+msgid "About"
 msgstr ""
 
-#: includes/class-nahnu-sct-admin.php:254
+#: includes/class-nahnu-sct-admin.php:255
 msgid "Unofficial. Styles the cart, checkout and account dashboard."
 msgstr ""
 
-#: includes/class-nahnu-sct-admin.php:257
+#: includes/class-nahnu-sct-admin.php:258
 msgid "Settings sections"
 msgstr ""
 
-#: includes/class-nahnu-sct-admin.php:271
+#: includes/class-nahnu-sct-admin.php:272
 msgid "Saved — live on your site"
 msgstr ""
 
-#: includes/class-nahnu-sct-admin.php:272
+#: includes/class-nahnu-sct-admin.php:273
 msgid "Reset to defaults"
 msgstr ""
 
-#: includes/class-nahnu-sct-admin.php:273
+#: includes/class-nahnu-sct-admin.php:274
 msgid "No unsaved changes"
 msgstr ""
 
-#: includes/class-nahnu-sct-admin.php:278
+#: includes/class-nahnu-sct-admin.php:279
 msgid "Reset every setting to its default?"
 msgstr ""
 
-#: includes/class-nahnu-sct-admin.php:279
+#: includes/class-nahnu-sct-admin.php:280
 msgid "Reset"
 msgstr ""
 
-#: includes/class-nahnu-sct-admin.php:283
+#: includes/class-nahnu-sct-admin.php:284
 msgid "Save changes"
 msgstr ""
 
-#: includes/class-nahnu-sct-admin.php:316
+#: includes/class-nahnu-sct-admin.php:321
 msgid "Cart"
 msgstr ""
 
-#: includes/class-nahnu-sct-admin.php:318
+#: includes/class-nahnu-sct-admin.php:323
 msgid "Dashboard"
 msgstr ""
 
-#: includes/class-nahnu-sct-admin.php:320
+#: includes/class-nahnu-sct-admin.php:325
 msgid "Live preview"
 msgstr ""
 
-#: includes/class-nahnu-sct-admin.php:322
+#: includes/class-nahnu-sct-admin.php:327
 msgid "Theme preview"
 msgstr ""
 
-#: includes/class-nahnu-sct-admin.php:324
+#: includes/class-nahnu-sct-admin.php:329
 msgid "Built from SureCart 4.10 class names and stylesheet rules. A cart customised in the Site Editor may differ slightly."
 msgstr ""
 
-#: includes/class-nahnu-sct-admin.php:354
+#: includes/class-nahnu-sct-admin.php:359
 msgid "The accent colour is used on every button, badge, focus ring and selected state across all three areas."
 msgstr ""
 
-#: includes/class-nahnu-sct-admin.php:356
+#: includes/class-nahnu-sct-admin.php:361
 msgid "Accent colour"
 msgstr ""
 
-#: includes/class-nahnu-sct-admin.php:375
+#: includes/class-nahnu-sct-admin.php:380
 msgid "Accent"
 msgstr ""
 
-#: includes/class-nahnu-sct-admin.php:375
+#: includes/class-nahnu-sct-admin.php:380
 msgid "Buttons, selected states, focus rings. Text colour on it is chosen automatically for contrast."
 msgstr ""
 
-#: includes/class-nahnu-sct-admin.php:376
+#: includes/class-nahnu-sct-admin.php:381
 msgid "Quick picks"
 msgstr ""
 
-#: includes/class-nahnu-sct-admin.php:379
+#: includes/class-nahnu-sct-admin.php:384
 msgid "Typography"
 msgstr ""
 
-#: includes/class-nahnu-sct-admin.php:380
+#: includes/class-nahnu-sct-admin.php:385
 msgid "Font family"
 msgstr ""
 
-#: includes/class-nahnu-sct-admin.php:380
+#: includes/class-nahnu-sct-admin.php:385
 msgid "Blank inherits your theme font. Any CSS font stack works."
 msgstr ""
 
-#: includes/class-nahnu-sct-admin.php:390
-msgid "The slide-out cart drawer and the floating cart bubble."
+#: includes/class-nahnu-sct-admin.php:404
+msgid "Works with SureCart"
 msgstr ""
 
-#: includes/class-nahnu-sct-admin.php:392
-msgid "Drawer"
-msgstr ""
-
-#: includes/class-nahnu-sct-admin.php:394
-msgid "Width"
-msgstr ""
-
-#: includes/class-nahnu-sct-admin.php:398
-msgid "Narrow · 360px"
-msgstr ""
-
-#: includes/class-nahnu-sct-admin.php:399
-msgid "Default · 420px"
-msgstr ""
-
-#: includes/class-nahnu-sct-admin.php:400
-msgid "Wide · 480px"
-msgstr ""
-
-#: includes/class-nahnu-sct-admin.php:401
-msgid "Extra wide · 540px"
-msgstr ""
-
-#: includes/class-nahnu-sct-admin.php:407
-msgid "Divider colour"
-msgstr ""
-
-#: includes/class-nahnu-sct-admin.php:407
-msgid "Lines between items and above the subtotal."
+#: includes/class-nahnu-sct-admin.php:406
+msgid "Marketing consent, not a cookie banner. It adds one opt-in checkbox to your SureCart checkout, sends each opt-in to your email tools and keeps a tamper-evident consent log. It works alongside your existing cookie plugin."
 msgstr ""
 
 #: includes/class-nahnu-sct-admin.php:408
-msgid "Backdrop opacity"
-msgstr ""
-
-#: includes/class-nahnu-sct-admin.php:408
-msgid "How much the page dims behind the open cart."
+msgid "Turn on SureCart in the plugin's Checkouts settings and choose where the checkbox appears."
 msgstr ""
 
 #: includes/class-nahnu-sct-admin.php:409
-msgid "Checkout button radius"
+msgid "Connect your email tools by pasting an API key. Your lists and tags load automatically."
 msgstr ""
 
-#: includes/class-nahnu-sct-admin.php:412
-msgid "Floating bubble"
+#: includes/class-nahnu-sct-admin.php:410
+msgid "Opt-ins are forwarded to your tools and logged as they happen. If a tool is down, checkout carries on, so customers never wait on your CRM."
 msgstr ""
 
-#: includes/class-nahnu-sct-admin.php:412
-msgid "The fixed cart button shown while the cart has items."
+#: includes/class-nahnu-sct-admin.php:415 includes/class-nahnu-sct-admin.php:434
+msgid "Free"
 msgstr ""
 
-#: includes/class-nahnu-sct-admin.php:413
-msgid "Show bubble"
+#: includes/class-nahnu-sct-admin.php:417
+msgid "This is how we run SureCart behind Bunny. It caches your HTML at Bunny.net's edge, deploys edge rules, syncs cache purges, and builds bypass rules from SureCart's own pages automatically, with no URLs to enter by hand."
 msgstr ""
 
-#: includes/class-nahnu-sct-admin.php:414
-msgid "Size"
+#: includes/class-nahnu-sct-admin.php:418
+msgid "An independent tool, not affiliated with or endorsed by Bunny.net."
 msgstr ""
 
-#: includes/class-nahnu-sct-admin.php:414
-msgid "Width × height."
+#: includes/class-nahnu-sct-admin.php:422
+msgid "Link in bio"
 msgstr ""
 
-#: includes/class-nahnu-sct-admin.php:415 includes/class-nahnu-sct-admin.php:437
-msgid "Corner radius"
+#: includes/class-nahnu-sct-admin.php:424
+msgid "Our link-in-bio plugin: self-hosted bio pages on your own site, sold as a single payment. Multilingual pages, country targeting, built-in themes and video support."
 msgstr ""
 
-#: includes/class-nahnu-sct-admin.php:415
-msgid "999px for a circle, 0 for square."
+#: includes/class-nahnu-sct-admin.php:428
+msgid "Cloudflare"
 msgstr ""
 
-#: includes/class-nahnu-sct-admin.php:416
-msgid "Offset from edge"
-msgstr ""
-
-#: includes/class-nahnu-sct-admin.php:416
-msgid "Bottom · right."
-msgstr ""
-
-#: includes/class-nahnu-sct-admin.php:419
-msgid "Features"
-msgstr ""
-
-#: includes/class-nahnu-sct-admin.php:420
-msgid "Quantity controls"
-msgstr ""
-
-#: includes/class-nahnu-sct-admin.php:420
-msgid "+ / − stepper on each line item."
-msgstr ""
-
-#: includes/class-nahnu-sct-admin.php:421
-msgid "Coupon field"
-msgstr ""
-
-#: includes/class-nahnu-sct-admin.php:421
-msgid "Promo-code entry inside the cart."
-msgstr ""
-
-#: includes/class-nahnu-sct-admin.php:429
-msgid "Form fields and plan selectors on the checkout page. These are applied through SureCart's own design tokens."
-msgstr ""
-
-#: includes/class-nahnu-sct-admin.php:431
-msgid "Input fields"
-msgstr ""
-
-#: includes/class-nahnu-sct-admin.php:432
-msgid "Border"
-msgstr ""
-
-#: includes/class-nahnu-sct-admin.php:433
-msgid "Border on hover"
-msgstr ""
-
-#: includes/class-nahnu-sct-admin.php:433
-msgid "Focus uses the accent colour."
-msgstr ""
-
-#: includes/class-nahnu-sct-admin.php:434
-msgid "Background"
-msgstr ""
-
-#: includes/class-nahnu-sct-admin.php:435
-msgid "Text"
+#: includes/class-nahnu-sct-admin.php:430
+msgid "One-click Cloudflare rules for your WordPress site."
 msgstr ""
 
 #: includes/class-nahnu-sct-admin.php:436
-msgid "Placeholder"
+msgid "Our free login protection plugin: lockouts, CAPTCHA, two-factor authentication, passkeys and geo-blocking, with its logs kept in your own database."
 msgstr ""
 
-#: includes/class-nahnu-sct-admin.php:439
-msgid "Shadow"
+#: includes/class-nahnu-sct-admin.php:445
+msgid "About Nahnu Plugins"
 msgstr ""
 
-#: includes/class-nahnu-sct-admin.php:443
-msgid "None · flat"
+#: includes/class-nahnu-sct-admin.php:446
+msgid "We build WordPress plugins and sell them on our own sites with SureCart."
 msgstr ""
 
-#: includes/class-nahnu-sct-admin.php:444
-msgid "Subtle · SureCart default"
+#: includes/class-nahnu-sct-admin.php:451
+msgid "This plugin started as the styling layer we needed for our own plugin sites. Every store we run on SureCart needs a cart, checkout and account area that match its brand, and we did not want to maintain custom CSS on each one. So we put the settings in one place, with a live preview, and now we are sharing it with anyone else selling with SureCart."
 msgstr ""
 
 #: includes/class-nahnu-sct-admin.php:452
-msgid "Labels & layout"
+msgid "It is an unofficial proof of concept, not affiliated with or endorsed by SureCart. Feedback and ideas are welcome."
 msgstr ""
 
-#: includes/class-nahnu-sct-admin.php:453
-msgid "Label colour"
-msgstr ""
-
-#: includes/class-nahnu-sct-admin.php:455
-msgid "Label weight"
-msgstr ""
-
-#: includes/class-nahnu-sct-admin.php:459
-msgid "Normal"
-msgstr ""
-
-#: includes/class-nahnu-sct-admin.php:460
-msgid "Medium"
-msgstr ""
-
-#: includes/class-nahnu-sct-admin.php:461
-msgid "Semibold"
-msgstr ""
-
-#: includes/class-nahnu-sct-admin.php:462
-msgid "Bold"
-msgstr ""
-
-#: includes/class-nahnu-sct-admin.php:468
-msgid "Row spacing"
-msgstr ""
-
-#: includes/class-nahnu-sct-admin.php:468
-msgid "Gap between form rows."
-msgstr ""
-
-#: includes/class-nahnu-sct-admin.php:469
-msgid "Plan card radius"
-msgstr ""
-
-#: includes/class-nahnu-sct-admin.php:469
-msgid "Price / plan selector cards."
+#: includes/class-nahnu-sct-admin.php:456
+msgid "Our plugins"
 msgstr ""
 
 #: includes/class-nahnu-sct-admin.php:477
-msgid "The customer dashboard: sidebar, cards, rows and navigation."
+msgid "Visit site"
 msgstr ""
 
-#: includes/class-nahnu-sct-admin.php:479
-msgid "Page & sidebar"
-msgstr ""
-
-#: includes/class-nahnu-sct-admin.php:480
-msgid "Page background"
-msgstr ""
-
-#: includes/class-nahnu-sct-admin.php:481
-msgid "Sidebar background"
-msgstr ""
-
-#: includes/class-nahnu-sct-admin.php:483
-msgid "Sidebar width"
-msgstr ""
-
-#: includes/class-nahnu-sct-admin.php:487
-msgid "Narrow · 260px"
-msgstr ""
-
-#: includes/class-nahnu-sct-admin.php:489
-msgid "SureCart default · 325px"
+#: includes/class-nahnu-sct-admin.php:484
+msgid "These are plain links. This plugin does not connect to any of these sites or send them any data."
 msgstr ""
 
 #: includes/class-nahnu-sct-admin.php:490
-msgid "Wide · 360px"
+msgid "The slide-out cart drawer and the floating cart bubble."
+msgstr ""
+
+#: includes/class-nahnu-sct-admin.php:492
+msgid "Drawer"
+msgstr ""
+
+#: includes/class-nahnu-sct-admin.php:494
+msgid "Width"
 msgstr ""
 
 #: includes/class-nahnu-sct-admin.php:498
-msgid "Cards & rows"
+msgid "Narrow · 360px"
 msgstr ""
 
 #: includes/class-nahnu-sct-admin.php:499
-msgid "Card border"
+msgid "Default · 420px"
 msgstr ""
 
 #: includes/class-nahnu-sct-admin.php:500
-msgid "Card radius"
+msgid "Wide · 480px"
 msgstr ""
 
-#: includes/class-nahnu-sct-admin.php:502
-msgid "Card shadow"
-msgstr ""
-
-#: includes/class-nahnu-sct-admin.php:506
-msgid "None"
+#: includes/class-nahnu-sct-admin.php:501
+msgid "Extra wide · 540px"
 msgstr ""
 
 #: includes/class-nahnu-sct-admin.php:507
-msgid "Subtle"
+msgid "Divider colour"
+msgstr ""
+
+#: includes/class-nahnu-sct-admin.php:507
+msgid "Lines between items and above the subtotal."
 msgstr ""
 
 #: includes/class-nahnu-sct-admin.php:508
-msgid "Elevated"
+msgid "Backdrop opacity"
+msgstr ""
+
+#: includes/class-nahnu-sct-admin.php:508
+msgid "How much the page dims behind the open cart."
+msgstr ""
+
+#: includes/class-nahnu-sct-admin.php:509
+msgid "Checkout button radius"
+msgstr ""
+
+#: includes/class-nahnu-sct-admin.php:512
+msgid "Floating bubble"
+msgstr ""
+
+#: includes/class-nahnu-sct-admin.php:512
+msgid "The fixed cart button shown while the cart has items."
+msgstr ""
+
+#: includes/class-nahnu-sct-admin.php:513
+msgid "Show bubble"
 msgstr ""
 
 #: includes/class-nahnu-sct-admin.php:514
-msgid "Row divider"
+msgid "Size"
+msgstr ""
+
+#: includes/class-nahnu-sct-admin.php:514
+msgid "Width × height."
+msgstr ""
+
+#: includes/class-nahnu-sct-admin.php:515 includes/class-nahnu-sct-admin.php:537
+msgid "Corner radius"
 msgstr ""
 
 #: includes/class-nahnu-sct-admin.php:515
-msgid "Row hover"
+msgid "999px for a circle, 0 for square."
 msgstr ""
 
-#: includes/class-nahnu-sct-admin.php:518
-msgid "Navigation"
+#: includes/class-nahnu-sct-admin.php:516
+msgid "Offset from edge"
+msgstr ""
+
+#: includes/class-nahnu-sct-admin.php:516
+msgid "Bottom · right."
 msgstr ""
 
 #: includes/class-nahnu-sct-admin.php:519
-msgid "Active item background"
+msgid "Features"
 msgstr ""
 
 #: includes/class-nahnu-sct-admin.php:520
+msgid "Quantity controls"
+msgstr ""
+
+#: includes/class-nahnu-sct-admin.php:520
+msgid "+ / − stepper on each line item."
+msgstr ""
+
+#: includes/class-nahnu-sct-admin.php:521
+msgid "Coupon field"
+msgstr ""
+
+#: includes/class-nahnu-sct-admin.php:521
+msgid "Promo-code entry inside the cart."
+msgstr ""
+
+#: includes/class-nahnu-sct-admin.php:529
+msgid "Form fields and plan selectors on the checkout page. These are applied through SureCart's own design tokens."
+msgstr ""
+
+#: includes/class-nahnu-sct-admin.php:531
+msgid "Input fields"
+msgstr ""
+
+#: includes/class-nahnu-sct-admin.php:532
+msgid "Border"
+msgstr ""
+
+#: includes/class-nahnu-sct-admin.php:533
+msgid "Border on hover"
+msgstr ""
+
+#: includes/class-nahnu-sct-admin.php:533
+msgid "Focus uses the accent colour."
+msgstr ""
+
+#: includes/class-nahnu-sct-admin.php:534
+msgid "Background"
+msgstr ""
+
+#: includes/class-nahnu-sct-admin.php:535
+msgid "Text"
+msgstr ""
+
+#: includes/class-nahnu-sct-admin.php:536
+msgid "Placeholder"
+msgstr ""
+
+#: includes/class-nahnu-sct-admin.php:539
+msgid "Shadow"
+msgstr ""
+
+#: includes/class-nahnu-sct-admin.php:543
+msgid "None · flat"
+msgstr ""
+
+#: includes/class-nahnu-sct-admin.php:544
+msgid "Subtle · SureCart default"
+msgstr ""
+
+#: includes/class-nahnu-sct-admin.php:552
+msgid "Labels & layout"
+msgstr ""
+
+#: includes/class-nahnu-sct-admin.php:553
+msgid "Label colour"
+msgstr ""
+
+#: includes/class-nahnu-sct-admin.php:555
+msgid "Label weight"
+msgstr ""
+
+#: includes/class-nahnu-sct-admin.php:559
+msgid "Normal"
+msgstr ""
+
+#: includes/class-nahnu-sct-admin.php:560
+msgid "Medium"
+msgstr ""
+
+#: includes/class-nahnu-sct-admin.php:561
+msgid "Semibold"
+msgstr ""
+
+#: includes/class-nahnu-sct-admin.php:562
+msgid "Bold"
+msgstr ""
+
+#: includes/class-nahnu-sct-admin.php:568
+msgid "Row spacing"
+msgstr ""
+
+#: includes/class-nahnu-sct-admin.php:568
+msgid "Gap between form rows."
+msgstr ""
+
+#: includes/class-nahnu-sct-admin.php:569
+msgid "Plan card radius"
+msgstr ""
+
+#: includes/class-nahnu-sct-admin.php:569
+msgid "Price / plan selector cards."
+msgstr ""
+
+#: includes/class-nahnu-sct-admin.php:577
+msgid "The customer dashboard: sidebar, cards, rows and navigation."
+msgstr ""
+
+#: includes/class-nahnu-sct-admin.php:579
+msgid "Page & sidebar"
+msgstr ""
+
+#: includes/class-nahnu-sct-admin.php:580
+msgid "Page background"
+msgstr ""
+
+#: includes/class-nahnu-sct-admin.php:581
+msgid "Sidebar background"
+msgstr ""
+
+#: includes/class-nahnu-sct-admin.php:583
+msgid "Sidebar width"
+msgstr ""
+
+#: includes/class-nahnu-sct-admin.php:587
+msgid "Narrow · 260px"
+msgstr ""
+
+#: includes/class-nahnu-sct-admin.php:589
+msgid "SureCart default · 325px"
+msgstr ""
+
+#: includes/class-nahnu-sct-admin.php:590
+msgid "Wide · 360px"
+msgstr ""
+
+#: includes/class-nahnu-sct-admin.php:598
+msgid "Cards & rows"
+msgstr ""
+
+#: includes/class-nahnu-sct-admin.php:599
+msgid "Card border"
+msgstr ""
+
+#: includes/class-nahnu-sct-admin.php:600
+msgid "Card radius"
+msgstr ""
+
+#: includes/class-nahnu-sct-admin.php:602
+msgid "Card shadow"
+msgstr ""
+
+#: includes/class-nahnu-sct-admin.php:606
+msgid "None"
+msgstr ""
+
+#: includes/class-nahnu-sct-admin.php:607
+msgid "Subtle"
+msgstr ""
+
+#: includes/class-nahnu-sct-admin.php:608
+msgid "Elevated"
+msgstr ""
+
+#: includes/class-nahnu-sct-admin.php:614
+msgid "Row divider"
+msgstr ""
+
+#: includes/class-nahnu-sct-admin.php:615
+msgid "Row hover"
+msgstr ""
+
+#: includes/class-nahnu-sct-admin.php:618
+msgid "Navigation"
+msgstr ""
+
+#: includes/class-nahnu-sct-admin.php:619
+msgid "Active item background"
+msgstr ""
+
+#: includes/class-nahnu-sct-admin.php:620
 msgid "Active item text"
 msgstr ""
 
@@ -497,58 +561,82 @@ msgstr ""
 msgid "Unsaved changes"
 msgstr ""
 
-#: includes/class-nahnu-sct-tools.php:304
+#: includes/class-nahnu-sct-tools.php:305
 msgid "Start from a preset, or move your settings between sites."
 msgstr ""
 
-#: includes/class-nahnu-sct-tools.php:308
+#: includes/class-nahnu-sct-tools.php:309
 msgid "Settings imported and saved."
 msgstr ""
 
-#: includes/class-nahnu-sct-tools.php:310
+#: includes/class-nahnu-sct-tools.php:311
 msgid "That file did not contain valid theme settings."
 msgstr ""
 
-#: includes/class-nahnu-sct-tools.php:315
+#: includes/class-nahnu-sct-tools.php:316
 msgid "Presets"
 msgstr ""
 
-#: includes/class-nahnu-sct-tools.php:316
+#: includes/class-nahnu-sct-tools.php:317
 msgid "Fills every setting from a starting point. The preview updates at once; nothing is saved until you click Save changes."
 msgstr ""
 
-#: includes/class-nahnu-sct-tools.php:335
+#: includes/class-nahnu-sct-tools.php:336
 msgid "Export"
 msgstr ""
 
-#: includes/class-nahnu-sct-tools.php:336
+#: includes/class-nahnu-sct-tools.php:337
 msgid "Download the saved settings as JSON to reuse on another site. A Media Library avatar is site-specific and is not included; a preset avatar is."
 msgstr ""
 
-#: includes/class-nahnu-sct-tools.php:341
+#: includes/class-nahnu-sct-tools.php:342
 msgid "Download settings JSON"
 msgstr ""
 
-#: includes/class-nahnu-sct-tools.php:356
+#: includes/class-nahnu-sct-tools.php:357
 msgid "Import"
 msgstr ""
 
-#: includes/class-nahnu-sct-tools.php:357
+#: includes/class-nahnu-sct-tools.php:358
 msgid "Upload a JSON file exported from this plugin, or paste its contents. Importing saves immediately and replaces the matching settings."
 msgstr ""
 
-#: includes/class-nahnu-sct-tools.php:365
+#: includes/class-nahnu-sct-tools.php:366
 msgid "Choose JSON file"
 msgstr ""
 
-#: includes/class-nahnu-sct-tools.php:368
+#: includes/class-nahnu-sct-tools.php:369
 msgid "No file chosen"
 msgstr ""
 
-#: includes/class-nahnu-sct-tools.php:372
+#: includes/class-nahnu-sct-tools.php:373
 msgid "Import and overwrite the current settings?"
 msgstr ""
 
-#: includes/class-nahnu-sct-tools.php:373
+#: includes/class-nahnu-sct-tools.php:374
 msgid "Import & save"
+msgstr ""
+
+#: includes/class-nahnu-sct-admin.php:448
+msgid "Nahnu Custom Theme for SureCart is an independent, unofficial plugin."
+msgstr ""
+
+#: includes/class-nahnu-sct-admin.php:448
+msgid "It is not made, reviewed, endorsed, sponsored or supported by SureCart or its owners, and it is not affiliated with them in any way."
+msgstr ""
+
+#: includes/class-nahnu-sct-admin.php:449
+msgid "The name \"SureCart\" is used only to describe which plugin this one works with. All SureCart names, logos and trademarks belong to their respective owners."
+msgstr ""
+
+#: includes/class-nahnu-sct-admin.php:450
+msgid "Please do not contact SureCart for help with this plugin. If something looks wrong in your cart, checkout or account area, turn this plugin off to check, and send questions or bug reports to us instead."
+msgstr ""
+
+#: includes/class-nahnu-sct-admin.php
+msgid "Disclaimer"
+msgstr ""
+
+#: includes/class-nahnu-sct-admin.php
+msgid "This is NOT an official SureCart plugin."
 msgstr ""

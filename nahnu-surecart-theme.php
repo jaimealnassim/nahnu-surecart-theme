@@ -3,7 +3,7 @@
  * Plugin Name:       Nahnu Custom Theme for SureCart
  * Plugin URI:        https://www.nahnuplugins.com/wordpress-plugins/
  * Description:       Unofficial proof-of-concept plugin by Nahnu Plugins. Themes the SureCart mini cart, checkout, and account dashboard to match your brand — accent color, inputs, sidebar, and more — no CSS required.
- * Version:           1.2.0
+ * Version:           1.0.3
  * Requires at least: 6.0
  * Requires PHP:      8.0
  * Requires Plugins:  surecart
@@ -19,7 +19,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'NAHNU_SCT_VERSION', '1.2.0' );
+define( 'NAHNU_SCT_VERSION', '1.0.3' );
 define( 'NAHNU_SCT_FILE', __FILE__ );
 define( 'NAHNU_SCT_DIR', plugin_dir_path( __FILE__ ) );
 define( 'NAHNU_SCT_URL', plugin_dir_url( __FILE__ ) );
@@ -33,7 +33,7 @@ require_once NAHNU_SCT_DIR . 'includes/class-nahnu-sct-avatar.php';
 require_once NAHNU_SCT_DIR . 'includes/class-nahnu-sct-tools.php';
 
 /**
- * Carry settings over from the pre-1.2.0 option key, once.
+ * Carry settings over from the option key used before the WordPress.org release, once.
  *
  * The PHP prefix changed from nst_ to nahnu_sct_ for the WordPress.org
  * release; existing installs keep their configuration.

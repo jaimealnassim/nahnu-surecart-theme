@@ -2,10 +2,10 @@
 Contributors: ja1me4
 Tags: surecart, checkout, cart, customization, theme
 Requires at least: 6.0
-Tested up to: 7.0
+Tested up to: 7.1
 Requires PHP: 8.0
 Requires Plugins: surecart
-Stable tag: 1.2.0
+Stable tag: 1.0.3
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -84,35 +84,39 @@ GitHub: https://github.com/jaimealnassim/nahnu-surecart-theme
 
 This plugin does not collect, store or transmit any personal data, and it does not connect to any external service. Settings are stored in a single option in your WordPress database and are removed when the plugin is deleted.
 
+== Screenshots ==
+
+1. Brand tab: accent colour, font and default profile photo, with the live cart preview beside it.
+2. Presets recolour every setting at once; nothing is saved until you click Save changes.
+3. Checkout tab: input fields, labels and plan selectors, previewed on a checkout form.
+4. Account tab: sidebar, cards, rows and navigation, previewed on the customer dashboard.
+5. Presets & Tools: starting points, plus JSON export and import to move settings between sites.
+6. About tab: our other plugins and a notice that this is an independent plugin, not made or endorsed by SureCart.
+
 == Changelog ==
 
-= 1.2.0 =
-* Redesigned settings screen: sticky top bar with section tabs, save state and Save/Reset always in reach; inspector-style rows; half-width live preview
-* Live preview beside the settings form. Every field change re-renders the generated CSS into a preview of the cart, checkout and account dashboard built from SureCart 4.10's own class names and stylesheet rules
+= 1.0.3 =
+* First WordPress.org release
+* New About tab: who we are, why we built this for our own SureCart-powered plugin sites, and links to our other plugins (plain links, no requests made)
+* About tab now opens with a prominent notice that this is an independent plugin, not made, endorsed or supported by SureCart
+* Settings screen with a sticky top bar (section tabs, save state, Save/Reset always in reach), inspector-style rows and a half-width live preview
+* Live preview of the mini cart, checkout and account dashboard, built from SureCart 4.10's own class names and stylesheet rules; every field change re-renders it
 * Theme presets (Obsidian, Soft, Sharp, Sage) that fill every setting in one click; nothing is saved until you choose to
-* Export settings as JSON and import them on another site
-* Settings tabs are deep-linkable (?tab=cart)
-* Internal: PHP prefix changed from nst_ to nahnu_sct_ for the WordPress.org release. Existing settings are migrated automatically on the first load
-
-= 1.1.0 =
-* Re-verified every selector and token against SureCart 4.10.0 (all stable)
-* Mini cart now themes through SureCart's own tokens (--sc-cart-main-label-text-color, --sc-input-help-text-color, --sc-panel-background-color, --sc-drawer-*) scoped to the cart wrapper. Stock cart templates need no !important; the !important fallbacks remain for carts customised in the Site Editor
-* Floating cart bubble switched from ~20 !important rules to the --sc-cart-icon-* / --sc-cart-counter-* tokens it already reads; removed a dead selector and a pointless z-index
-* Quantity stepper rules rewritten at the correct specificity (SureCart uses 2–3 class selectors; ours were being ignored)
-* Restored backdrop opacity and transition speed, which had settings but no output
-* Button and bubble text colour now computed for contrast with the same brightness test SureCart uses, so light accent colours stay readable
-* Dashboard sidebar border uses border-inline-end to match SureCart 4.10's RTL change
-* Avatar notice corrected: esc_url() strips data URIs and SVG, not ordinary image URLs
+* Export settings as JSON and import them on another site; settings tabs are deep-linkable (?tab=cart)
+* Mini cart themed through SureCart's own tokens scoped to the cart wrapper; !important fallbacks only for carts customised in the Site Editor
+* Floating cart bubble driven by the --sc-cart-icon-* / --sc-cart-counter-* tokens; quantity stepper at the correct specificity
+* Button and bubble text colour computed for contrast with the same brightness test SureCart uses, so light accent colours stay readable
+* Dashboard sidebar border uses border-inline-end to match SureCart 4.10's RTL handling
+* Font family is validated against a strict allow-list and every setting is re-validated when read, so nothing unvalidated reaches the generated CSS
+* Verified against SureCart 4.10.0; passes PHP_CodeSniffer (WordPress, WordPress-Extra) and Plugin Check
+* Internal: PHP prefix is now nahnu_sct_. Settings saved by earlier pre-release builds are migrated automatically on first load
 
 = 1.0.0 =
-* Initial release
-* Mini cart theming — drawer width, bubble, checkout button
-* Checkout page theming — input tokens via CSS custom properties
-* Account dashboard theming — sidebar, cards, nav tabs
-* Default profile photo (experimental)
-* 6 built-in preset avatars
+* Initial pre-release
+* Mini cart, checkout and account dashboard theming
+* Default profile photo (experimental) and 6 built-in preset avatars
 
 == Upgrade Notice ==
 
-= 1.0.0 =
-Initial release.
+= 1.0.3 =
+First WordPress.org release. Settings from earlier builds are migrated automatically.

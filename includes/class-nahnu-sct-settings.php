@@ -87,7 +87,47 @@ class Nahnu_SCT_Settings {
 	 */
 	public static function get(): array {
 		$saved = get_option( NAHNU_SCT_OPTION, array() );
-		return wp_parse_args( $saved, self::defaults() );
+		$saved = is_array( $saved ) ? $saved : array();
+		// Validate again on every read ("escape late"): the stored option is
+		// never trusted, so nothing unvalidated can reach the generated CSS.
+		return self::sanitize( wp_parse_args( $saved, self::defaults() ), $saved );
+	}
+
+	/**
+	 * Validate a font-family list and return it normalised, or '' if invalid.
+	 *
+	 * Accepts a comma-separated list of up to eight families. Each family is a
+	 * quoted or bare name made of letters, digits, spaces, hyphens and
+	 * underscores, or one of the CSS generic keywords. Anything else (braces,
+	 * semicolons, parentheses, slashes, colons, angle brackets, backslashes…)
+	 * rejects the whole value. Names are re-emitted in single quotes, so the
+	 * result is always a plain, inert font-family value.
+	 *
+	 * @param string $value Raw value.
+	 * @return string Safe value, or an empty string.
+	 */
+	public static function sanitize_font_family( string $value ): string {
+		$value = trim( $value );
+		if ( '' === $value || strlen( $value ) > 200 ) {
+			return '';
+		}
+		$generic = array( 'serif', 'sans-serif', 'monospace', 'cursive', 'fantasy', 'system-ui', 'ui-serif', 'ui-sans-serif', 'ui-monospace', 'ui-rounded', 'inherit' );
+		$parts   = explode( ',', $value );
+		if ( count( $parts ) > 8 ) {
+			return '';
+		}
+		$out = array();
+		foreach ( $parts as $part ) {
+			$part = trim( $part );
+			if ( preg_match( '/^([\'"])(.*)\1$/u', $part, $m ) ) {
+				$part = trim( $m[2] );
+			}
+			if ( '' === $part || ! preg_match( '/^[\p{L}\p{N} _-]+$/u', $part ) ) {
+				return '';
+			}
+			$out[] = in_array( strtolower( $part ), $generic, true ) ? strtolower( $part ) : "'" . $part . "'";
+		}
+		return implode( ', ', $out );
 	}
 
 	/**
@@ -178,7 +218,7 @@ class Nahnu_SCT_Settings {
 		// Box-shadow fields — only allow 'none' or a safe value.
 		foreach ( array( 'input_shadow', 'dashboard_card_shadow' ) as $key ) {
 			$val           = sanitize_text_field( $raw[ $key ] ?? '' );
-			$clean[ $key ] = ( 'none' === $val || preg_match( '/^[\d\s\-\(\),\.#a-zA-Z%]+$/', $val ) )
+			$clean[ $key ] = ( 'none' === $val || ( preg_match( '/^[\d\s\-\(\),\.#a-zA-Z%]+$/', $val ) && ! preg_match( '/url|expression|import|var\(/i', $val ) ) )
 				? $val
 				: $defs[ $key ];
 		}
@@ -197,8 +237,8 @@ class Nahnu_SCT_Settings {
 		$preset                         = $raw['default_avatar_preset'] ?? $existing['default_avatar_preset'] ?? '';
 		$clean['default_avatar_preset'] = sanitize_key( (string) $preset );
 
-		// Font family — sanitise text, allow empty.
-		$clean['font_family'] = sanitize_text_field( $raw['font_family'] ?? '' );
+		// Font family — strict allow-list (see sanitize_font_family()); empty inherits the theme font.
+		$clean['font_family'] = self::sanitize_font_family( sanitize_text_field( (string) ( $raw['font_family'] ?? '' ) ) );
 
 		// Tab active background — hex only.
 		$tab_bg                 = sanitize_text_field( $raw['tab_active_bg'] ?? '' );
